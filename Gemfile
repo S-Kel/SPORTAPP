@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'rest-client', '~> 2.0', '>= 2.0.2'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
-
+gem 'simple_form'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -70,6 +70,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "cloudinary", "~> 1.10"
+# gem "cloudinary", "~> 1.10"
+gem "cloudinary", "1.9.1"
 
 gem "activestorage-cloudinary-service", "~> 0.2.0"

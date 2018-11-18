@@ -4,8 +4,9 @@
   <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
     <div class="row">
       <div class="col-md-4 col-sm-12">
-        <!--%= image_tag(@sport.image, class: "img-fluid rounded float-left") % -->
-        
+        <% if @sport.image.attached? %>
+          <%= cl_image_tag("#{@sport.image.blob.key}.png", class: "img-fluid rounded float-left") %>
+        <% end %>
       </div>
       <div class="col-md-8 col-sm-12">
         <p></p>

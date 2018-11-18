@@ -27,11 +27,8 @@ class SportsController < ApplicationController
     
     # Cloudinary::Uploader.upload('\app\assets\images\basketball.png')
     @sport = Sport.new(sport_params)
-    
-    @sport.image.attach(sport_params[:image])   
-    session[:user_id] = user.id
-    debugger
-    
+    @sport.image.attach(sport_params[:image])
+   
     respond_to do |format|
       if @sport.save
         format.html { redirect_to @sport, notice: 'Sport was successfully created.' }
@@ -75,6 +72,7 @@ class SportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sport_params
+      # params.require(:sport).permit(:image, :name, :description)
       params.require(:sport).permit(:name, :description, :image)
     end
 end

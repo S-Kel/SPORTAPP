@@ -1,11 +1,15 @@
 <p id="notice"><%= notice %></p>
-<%= Rails.application.config.inspect %>
+
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
   <div class="row">
     <% @sports.each do |sport| %>
       <div class="col-md-4 col">
         <div class="card mb-4 col box-shadow">
-          <%= sport.image.attached? ? image_tag(sport.image, class: "card-img-top") :  image_tag("missing.png", class: "card-img-top") %>
+          <% if sport.image.attached? %>
+            <%= link_to(cl_image_tag("#{sport.image.blob.key}.png", class: "card-img-top img-fluid rounded float-left"),'#') %>
+            <% else %>
+               <%= image_tag("missing.png", class: "card-img-top") %>
+          <% end %>         
           <div class="card-body">
             <h5 class="card-title"><%= link_to sport.name, '#' %></h5>
             <p class="card-text"><%= sport.description %>
