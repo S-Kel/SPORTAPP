@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <!--%= image_tag(@sport.image, class: "img-fluid rounded float-left") % -->
+        
+      </div>
+      <div class="col-md-8 col-sm-12">
+        <p></p>
+          <strong>Description:</strong>
+          <%= @sport.description %>
+        </p>
+        <%= link_to 'Edit', edit_sport_path(@sport), class: "btn btn-link"  %> |
+        <%= link_to 'Back', sports_path, class: "btn btn-link" %>
+      </div>
+    </div>
+  </div>
+</div>
