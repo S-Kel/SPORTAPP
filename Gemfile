@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'rest-client', '~> 2.0', '>= 2.0.2'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
-gem 'simple_form'
+# gem 'simple_form'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
